@@ -1,0 +1,2455 @@
+2025-09-19 21:57:37,855 - __main__ - INFO - No state file found. Starting with enhanced clean state.
+2025-09-19 21:57:40,301 - __main__ - ERROR - Failed to start bot: name 'set_owner' is not defined
+2025-09-19 22:10:14,654 - __main__ - INFO - No state file found. Starting with enhanced clean state.
+2025-09-19 22:10:17,214 - __main__ - INFO - Starting enhanced auction bot...
+2025-09-19 22:10:21,267 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-19 22:10:21,268 - telegram.ext.Application - INFO - Application started
+2025-09-19 22:10:36,803 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:11:00,490 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:11:32,643 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:11:47,078 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 1441, in button_callback
+    await auction_stats_command(update, context)
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 1266, in auction_stats_command
+    await update.message.reply_text(stats_text, parse_mode="HTML")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reply_text'
+2025-09-19 22:12:01,110 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:12:40,430 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:12:40,431 - __main__ - INFO - Team A registered.
+2025-09-19 22:12:51,282 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 447, in register
+    await update.message.reply_text(
+    ...<2 lines>...
+    )
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:14:27,643 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:14:27,643 - __main__ - INFO - Captain for A set to 8387898150
+2025-09-19 22:14:50,476 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:14:50,476 - __main__ - INFO - Captain for B set to 7460266461
+2025-09-19 22:18:08,518 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-09-19 22:18:08,520 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-19 22:18:08,540 - telegram.ext.Application - INFO - Application.stop() complete
+2025-09-19 22:18:14,915 - __main__ - INFO - No state file found. Starting with enhanced clean state.
+2025-09-19 22:18:17,253 - __main__ - INFO - Starting enhanced auction bot...
+2025-09-19 22:18:23,267 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-19 22:18:23,268 - telegram.ext.Application - INFO - Application started
+2025-09-19 22:18:52,040 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 322, in start
+    await update.message.reply_text(message, parse_mode="HTML", reply_markup=reply_markup)
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:19:05,964 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:19:30,422 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 447, in register
+    await update.message.reply_text(
+    ...<2 lines>...
+    )
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:19:39,305 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:19:39,306 - __main__ - INFO - Team B registered.
+2025-09-19 22:20:24,196 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:20:24,197 - __main__ - INFO - Players loaded from players.csv
+2025-09-19 22:20:49,592 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:20:49,592 - __main__ - INFO - Captain for A set to 7460266461
+2025-09-19 22:21:07,105 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:21:07,105 - __main__ - INFO - Captain for B set to 7995262033
+2025-09-19 22:21:21,845 - __main__ - ERROR - Failed to fetch user profile for 123456789: Chat not found
+2025-09-19 22:21:22,873 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:21:22,874 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:21:22,876 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:21:22,880 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:21:22,881 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:21:31,064 - apscheduler.scheduler - INFO - Removed job 79a9a09c8bcd46129d500cb1dca92cf1
+2025-09-19 22:21:31,064 - apscheduler.scheduler - INFO - Removed job 4df3b3d8f38544f68c532f74485fd6f4
+2025-09-19 22:21:31,065 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:21:31,066 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:21:31,067 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:21:31,067 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:21:31,071 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:21:55,542 - apscheduler.scheduler - INFO - Removed job 54bbe1be3b844488bef41056adfdf73e
+2025-09-19 22:21:55,543 - apscheduler.scheduler - INFO - Removed job a378ff34b65544fa8c6499809bff7e2b
+2025-09-19 22:21:55,544 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:21:55,546 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:21:55,548 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:21:55,549 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:21:55,553 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:21:55,556 - __main__ - INFO - Enhanced bid: 210.0 by A for Virat Kohli
+2025-09-19 22:22:22,560 - apscheduler.scheduler - INFO - Removed job a2e611d3ae0f45e3949e9ef9ceb959c6
+2025-09-19 22:22:22,560 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 16:52:22 UTC], next run at: 2025-09-19 16:52:22 UTC)" (scheduled at 2025-09-19 16:52:22.546365+00:00)
+2025-09-19 22:22:24,404 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 675, in enhanced_bid_command
+    await update.message.reply_text(
+    ...<4 lines>...
+    )
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:22:25,559 - apscheduler.scheduler - INFO - Removed job c137b5993854479ba60a9b2a44d65dc6
+2025-09-19 22:22:25,560 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 16:52:25 UTC], next run at: 2025-09-19 16:52:25 UTC)" (scheduled at 2025-09-19 16:52:25.548219+00:00)
+2025-09-19 22:22:25,561 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:22:27,588 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:22:27,589 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:22:27,590 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:22:27,591 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:22:27,595 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:22:27,596 - __main__ - INFO - Enhanced bid: 250.0 by B for Virat Kohli
+2025-09-19 22:22:27,957 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:22:27,960 - __main__ - INFO - Enhanced results exported to auction_results_20250919_222227.csv
+2025-09-19 22:22:29,852 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 16:52:22 UTC], next run at: 2025-09-19 16:52:22 UTC)" executed successfully
+2025-09-19 22:22:34,346 - __main__ - ERROR - Failed to fetch user profile for 456789123: Chat not found
+2025-09-19 22:22:35,267 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:22:35,268 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:22:35,269 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:22:35,272 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:22:35,273 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:22:35,273 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 16:52:25 UTC], next run at: 2025-09-19 16:52:25 UTC)" executed successfully
+2025-09-19 22:22:48,886 - apscheduler.scheduler - INFO - Removed job a0e3541da5504970aa412da8f37e3e58
+2025-09-19 22:22:48,886 - apscheduler.scheduler - INFO - Removed job 34a604b2813d4b078538a42eb0d318f1
+2025-09-19 22:22:48,886 - apscheduler.scheduler - INFO - Removed job f56c9c1d3cd84eb1b2d39a5baa109da0
+2025-09-19 22:22:48,887 - apscheduler.scheduler - INFO - Removed job 91622787634947f6a707bda653188cb7
+2025-09-19 22:22:48,887 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:22:48,889 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:22:48,891 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:22:48,892 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:22:48,897 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:23:05,475 - apscheduler.scheduler - INFO - Removed job d881fcd5267a416295102b7a118863da
+2025-09-19 22:23:05,476 - apscheduler.scheduler - INFO - Removed job 12f782af71b849d287ca937f28ae0af5
+2025-09-19 22:23:05,477 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:23:05,478 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:23:05,479 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:23:05,481 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:23:05,486 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:23:05,489 - __main__ - INFO - Enhanced bid: 230.0 by A for Hardik Pandya
+2025-09-19 22:23:32,479 - apscheduler.scheduler - INFO - Removed job 94628757aa2248c6a19b7e5ecbf90bc1
+2025-09-19 22:23:32,480 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 16:53:32 UTC], next run at: 2025-09-19 16:53:32 UTC)" (scheduled at 2025-09-19 16:53:32.477760+00:00)
+2025-09-19 22:23:35,477 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 16:53:32 UTC], next run at: 2025-09-19 16:53:32 UTC)" executed successfully
+2025-09-19 22:23:35,488 - apscheduler.scheduler - INFO - Removed job 5dda72dc072f432fb9c958b2cb6fde23
+2025-09-19 22:23:35,488 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 16:53:35 UTC], next run at: 2025-09-19 16:53:35 UTC)" (scheduled at 2025-09-19 16:53:35.478748+00:00)
+2025-09-19 22:23:35,489 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:23:36,413 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:23:36,415 - __main__ - INFO - Enhanced results exported to auction_results_20250919_222336.csv
+2025-09-19 22:23:40,699 - __main__ - ERROR - Failed to fetch user profile for 567891234: Chat not found
+2025-09-19 22:23:41,640 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:23:41,641 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:23:41,642 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:23:41,646 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:23:41,650 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:23:41,650 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 16:53:35 UTC], next run at: 2025-09-19 16:53:35 UTC)" executed successfully
+2025-09-19 22:23:55,035 - __main__ - ERROR - Failed to fetch user profile for 567891234: Chat not found
+2025-09-19 22:23:57,902 - apscheduler.scheduler - INFO - Removed job 8c50c56b103b45989ba857dfdccfcb74
+2025-09-19 22:23:57,903 - apscheduler.scheduler - INFO - Removed job 87f96c2cb7cf4e958e92ec52ae45c183
+2025-09-19 22:23:57,904 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:23:57,905 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:23:57,906 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:23:57,907 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:23:57,910 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:24:10,105 - apscheduler.scheduler - INFO - Removed job 2803a78086ad4cabbc07ca8bd64a312a
+2025-09-19 22:24:10,106 - apscheduler.scheduler - INFO - Removed job f363b56fa19f427885f13f62846bda27
+2025-09-19 22:24:10,106 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:24:10,108 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:24:10,110 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:24:10,110 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:24:10,113 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:24:10,117 - __main__ - INFO - Enhanced bid: 210.0 by B for Rohit Sharma
+2025-09-19 22:24:12,239 - apscheduler.scheduler - INFO - Removed job ef255db2f9de4ec39654fe3357439656
+2025-09-19 22:24:12,240 - apscheduler.scheduler - INFO - Removed job 0600a00075ea46f4adbd285e8f3a48a9
+2025-09-19 22:24:12,241 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:24:12,242 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:24:12,243 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:24:12,246 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:24:12,249 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:24:12,250 - __main__ - INFO - Enhanced bid: 300.0 by A for Rohit Sharma
+2025-09-19 22:24:39,248 - apscheduler.scheduler - INFO - Removed job ea1705f39e23468eb98c40cff0eb20cc
+2025-09-19 22:24:39,249 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 16:54:39 UTC], next run at: 2025-09-19 16:54:39 UTC)" (scheduled at 2025-09-19 16:54:39.242207+00:00)
+2025-09-19 22:24:42,248 - apscheduler.scheduler - INFO - Removed job e4089f01ca694874b2c04fc204b22c86
+2025-09-19 22:24:42,248 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 16:54:42 UTC], next run at: 2025-09-19 16:54:42 UTC)" (scheduled at 2025-09-19 16:54:42.243341+00:00)
+2025-09-19 22:24:42,249 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:24:45,004 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_jobqueue.py", line 997, in _run
+    await self.callback(context)
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 232, in send_timer_reminder
+    await context.bot.send_message(
+    ...<3 lines>...
+    )
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:24:45,017 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 16:54:39 UTC], next run at: 2025-09-19 16:54:39 UTC)" executed successfully
+2025-09-19 22:24:47,778 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:24:47,780 - __main__ - INFO - Enhanced results exported to auction_results_20250919_222447.csv
+2025-09-19 22:24:52,026 - __main__ - ERROR - Failed to fetch user profile for 112233445: Chat not found
+2025-09-19 22:24:55,246 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:24:55,247 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:24:55,247 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:24:55,250 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:24:55,250 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:24:55,251 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 16:54:42 UTC], next run at: 2025-09-19 16:54:42 UTC)" executed successfully
+2025-09-19 22:25:06,714 - apscheduler.scheduler - INFO - Removed job 5c205bc8bf6042dc9e9e6313176cffe6
+2025-09-19 22:25:06,715 - apscheduler.scheduler - INFO - Removed job bf9bab0f741d4b29badbce999c1ac780
+2025-09-19 22:25:06,715 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:25:06,716 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:25:06,717 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:25:06,717 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:25:06,720 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:25:33,726 - apscheduler.scheduler - INFO - Removed job 39c722ce4b534501ab54510a59dc5f21
+2025-09-19 22:25:33,726 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 16:55:33 UTC], next run at: 2025-09-19 16:55:33 UTC)" (scheduled at 2025-09-19 16:55:33.715957+00:00)
+2025-09-19 22:25:35,953 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 16:55:33 UTC], next run at: 2025-09-19 16:55:33 UTC)" executed successfully
+2025-09-19 22:25:36,719 - apscheduler.scheduler - INFO - Removed job dc78fad441bf4e10878141c5afe6fc90
+2025-09-19 22:25:36,720 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 16:55:36 UTC], next run at: 2025-09-19 16:55:36 UTC)" (scheduled at 2025-09-19 16:55:36.716830+00:00)
+2025-09-19 22:25:36,720 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:25:37,857 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:25:37,860 - __main__ - INFO - Enhanced results exported to auction_results_20250919_222537.csv
+2025-09-19 22:25:42,249 - __main__ - ERROR - Failed to fetch user profile for 543210987: Chat not found
+2025-09-19 22:25:43,272 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:25:43,273 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:25:43,274 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:25:43,279 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:25:43,279 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:25:43,281 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 16:55:36 UTC], next run at: 2025-09-19 16:55:36 UTC)" executed successfully
+2025-09-19 22:25:47,879 - apscheduler.scheduler - INFO - Removed job 37a0b601a98b42fdb3098b6c435b3cc0
+2025-09-19 22:25:47,880 - apscheduler.scheduler - INFO - Removed job 73b29d3bd161446e84d7bae9dc06a232
+2025-09-19 22:25:47,880 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:25:47,881 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:25:47,882 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:25:47,882 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:25:47,886 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:26:14,883 - apscheduler.scheduler - INFO - Removed job 327538cc5f264eaabfcc872ef8f747e6
+2025-09-19 22:26:14,885 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 16:56:14 UTC], next run at: 2025-09-19 16:56:14 UTC)" (scheduled at 2025-09-19 16:56:14.880964+00:00)
+2025-09-19 22:26:17,887 - apscheduler.scheduler - INFO - Removed job 0f0023bac7de4a23a69da94a0dc3879d
+2025-09-19 22:26:17,888 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 16:56:17 UTC], next run at: 2025-09-19 16:56:17 UTC)" (scheduled at 2025-09-19 16:56:17.881844+00:00)
+2025-09-19 22:26:17,890 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:26:19,112 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 16:56:14 UTC], next run at: 2025-09-19 16:56:14 UTC)" executed successfully
+2025-09-19 22:26:28,494 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_jobqueue.py", line 997, in _run
+    await self.callback(context)
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 263, in end_bid_automatically
+    await conclude_auction(context.bot, auction_data["main_chat_id"], context)
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 865, in conclude_auction
+    await bot.send_message(chat_id=chat_id, text=sold_message, parse_mode="HTML")
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:26:28,504 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 16:56:17 UTC], next run at: 2025-09-19 16:56:17 UTC)" executed successfully
+2025-09-19 22:26:59,364 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 959, in status
+    time_left = auction_data["bidding_timer"] - datetime.now()
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+2025-09-19 22:27:12,157 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 959, in status
+    time_left = auction_data["bidding_timer"] - datetime.now()
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+2025-09-19 22:29:15,961 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:30:48,422 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:30:48,425 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:32:45,365 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-09-19 22:32:45,365 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-19 22:32:45,389 - telegram.ext.Application - INFO - Application.stop() complete
+2025-09-19 22:32:50,261 - __main__ - INFO - No state file found. Starting with enhanced clean state.
+2025-09-19 22:32:52,840 - __main__ - INFO - Starting enhanced auction bot...
+2025-09-19 22:32:59,394 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-19 22:32:59,394 - telegram.ext.Application - INFO - Application started
+2025-09-19 22:33:09,634 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:33:10,456 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:33:22,024 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:33:47,218 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:33:47,218 - __main__ - INFO - Team Jhanvi registered.
+2025-09-19 22:34:04,109 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:34:04,110 - __main__ - INFO - Team Shubh registered.
+2025-09-19 22:34:20,393 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:34:20,398 - __main__ - INFO - Players loaded from players.csv
+2025-09-19 22:34:38,002 - __main__ - ERROR - Failed to fetch user profile for 987654321: Chat not found
+2025-09-19 22:34:38,722 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:34:38,723 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:34:38,723 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:34:38,727 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:34:38,727 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:34:51,928 - __main__ - ERROR - Failed to fetch user profile for 987654321: Chat not found
+2025-09-19 22:35:05,731 - apscheduler.scheduler - INFO - Removed job 1b8ac8e59369477a82c1019923f52841
+2025-09-19 22:35:05,732 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:05:05 UTC], next run at: 2025-09-19 17:05:05 UTC)" (scheduled at 2025-09-19 17:05:05.719887+00:00)
+2025-09-19 22:35:07,902 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:05:05 UTC], next run at: 2025-09-19 17:05:05 UTC)" executed successfully
+2025-09-19 22:35:08,729 - apscheduler.scheduler - INFO - Removed job 9c92da69362243d39ea9a74c3bb95fbe
+2025-09-19 22:35:08,729 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:05:08 UTC], next run at: 2025-09-19 17:05:08 UTC)" (scheduled at 2025-09-19 17:05:08.722983+00:00)
+2025-09-19 22:35:08,730 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:35:09,541 - __main__ - INFO - Player Jasprit Bumrah went unsold
+2025-09-19 22:35:09,545 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:35:09,547 - __main__ - INFO - Enhanced results exported to auction_results_20250919_223509.csv
+2025-09-19 22:35:13,636 - __main__ - ERROR - Failed to fetch user profile for 987654321: Chat not found
+2025-09-19 22:35:14,354 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:35:14,355 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:35:14,356 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:35:14,360 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:35:14,362 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:35:14,363 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:05:08 UTC], next run at: 2025-09-19 17:05:08 UTC)" executed successfully
+2025-09-19 22:35:33,926 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:35:33,927 - __main__ - INFO - Captain for Jhanvi set to 7379484662
+2025-09-19 22:35:41,364 - apscheduler.scheduler - INFO - Removed job fb8b628825a147fdb2b2a5961c352a34
+2025-09-19 22:35:41,364 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:05:41 UTC], next run at: 2025-09-19 17:05:41 UTC)" (scheduled at 2025-09-19 17:05:41.354412+00:00)
+2025-09-19 22:35:42,004 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:35:42,005 - __main__ - INFO - Captain for Shubh set to 7460266461
+2025-09-19 22:35:43,333 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:05:41 UTC], next run at: 2025-09-19 17:05:41 UTC)" executed successfully
+2025-09-19 22:35:44,366 - apscheduler.scheduler - INFO - Removed job e9d78d6765684315af87b4ab26e398f3
+2025-09-19 22:35:44,367 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:05:44 UTC], next run at: 2025-09-19 17:05:44 UTC)" (scheduled at 2025-09-19 17:05:44.355384+00:00)
+2025-09-19 22:35:44,367 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:35:45,278 - __main__ - INFO - Player AB de Villiers went unsold
+2025-09-19 22:35:45,283 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:35:45,285 - __main__ - INFO - Enhanced results exported to auction_results_20250919_223545.csv
+2025-09-19 22:35:49,385 - __main__ - ERROR - Failed to fetch user profile for 112233445: Chat not found
+2025-09-19 22:35:50,194 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:35:50,195 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:35:50,195 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:35:50,198 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:35:50,199 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:35:50,200 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:05:44 UTC], next run at: 2025-09-19 17:05:44 UTC)" executed successfully
+2025-09-19 22:35:59,511 - apscheduler.scheduler - INFO - Removed job 1f648e983ea844cfb41bcfa80cf664b4
+2025-09-19 22:35:59,512 - apscheduler.scheduler - INFO - Removed job 625fd7c9c8344da0b39c62038bcb4181
+2025-09-19 22:35:59,512 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:35:59,513 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:35:59,514 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:35:59,514 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:35:59,518 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:01,662 - apscheduler.scheduler - INFO - Removed job f67baf7a066d425f81485131290b1d34
+2025-09-19 22:36:01,663 - apscheduler.scheduler - INFO - Removed job 8c08d8ca384c4abcbb73af9d962434db
+2025-09-19 22:36:01,663 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:36:01,664 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:36:01,665 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:36:01,665 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:36:01,669 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:17,535 - apscheduler.scheduler - INFO - Removed job 5885d9958f1f473e9074465d3608c9e8
+2025-09-19 22:36:17,536 - apscheduler.scheduler - INFO - Removed job 78625810247f4437bc55d92f13717720
+2025-09-19 22:36:17,536 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:36:17,538 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:36:17,538 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:36:17,539 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:36:17,543 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:17,544 - __main__ - INFO - Enhanced bid: 201.0 by Shubh for MS Dhoni
+2025-09-19 22:36:21,734 - apscheduler.scheduler - INFO - Removed job a25d7c6149c94f4b931c7fd755d5550a
+2025-09-19 22:36:21,735 - apscheduler.scheduler - INFO - Removed job f060058e74e34b66a9f0b605e8332ebd
+2025-09-19 22:36:21,736 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:36:21,737 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:36:21,738 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:36:21,738 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:36:21,741 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:21,743 - __main__ - INFO - Enhanced bid: 300.0 by Jhanvi for MS Dhoni
+2025-09-19 22:36:30,335 - apscheduler.scheduler - INFO - Removed job 5230d003589f4df4bad3014693fed72c
+2025-09-19 22:36:30,335 - apscheduler.scheduler - INFO - Removed job b56d5d9e09684093b78a7b9c7c978b83
+2025-09-19 22:36:30,337 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:36:30,337 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:36:30,338 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:36:30,340 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:36:30,343 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:30,343 - __main__ - INFO - Enhanced bid: 312.0 by Shubh for MS Dhoni
+2025-09-19 22:36:37,301 - apscheduler.scheduler - INFO - Removed job 4661e94b9dca423c8e6b03ccb7ca12e2
+2025-09-19 22:36:37,301 - apscheduler.scheduler - INFO - Removed job 221064476abf4cf699624706806d13ea
+2025-09-19 22:36:37,302 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:36:37,302 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:36:37,303 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:36:37,304 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:36:37,308 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:37,309 - __main__ - INFO - Enhanced bid: 350.0 by Jhanvi for MS Dhoni
+2025-09-19 22:36:45,970 - apscheduler.scheduler - INFO - Removed job c4f27e643fd94a4f9eaa3d0b73bcc2f4
+2025-09-19 22:36:45,970 - apscheduler.scheduler - INFO - Removed job 93eabc86ffaa42b1b86281cf5ac2c739
+2025-09-19 22:36:45,971 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:36:45,972 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:36:45,973 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:36:45,974 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:36:45,977 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:45,979 - __main__ - INFO - Enhanced bid: 400.0 by Shubh for MS Dhoni
+2025-09-19 22:36:49,894 - apscheduler.scheduler - INFO - Removed job 3e345c13cb8243248414ad857ed09c71
+2025-09-19 22:36:49,895 - apscheduler.scheduler - INFO - Removed job 388334c6f0e44ba6a85b6e162dc053c4
+2025-09-19 22:36:49,896 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:36:49,897 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:36:49,898 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:36:49,901 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:36:49,904 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:36:49,907 - __main__ - INFO - Enhanced bid: 500.0 by Jhanvi for MS Dhoni
+2025-09-19 22:37:03,614 - apscheduler.scheduler - INFO - Removed job 95e2e985c6404f7baee94d845e42393c
+2025-09-19 22:37:03,615 - apscheduler.scheduler - INFO - Removed job 5ab4e0321b734c9da132b6f24c6f41c1
+2025-09-19 22:37:03,615 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:37:03,616 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:37:03,617 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:37:03,618 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:37:03,621 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:37:03,622 - __main__ - INFO - Enhanced bid: 550.0 by Shubh for MS Dhoni
+2025-09-19 22:37:09,250 - apscheduler.scheduler - INFO - Removed job 03165bb6cd6d468f8f61a6f339417f22
+2025-09-19 22:37:09,250 - apscheduler.scheduler - INFO - Removed job e13ed1e1f7624da8afcf13e267c03d0c
+2025-09-19 22:37:09,250 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:37:09,251 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:37:09,253 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:37:09,253 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:37:09,259 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:37:09,261 - __main__ - INFO - Enhanced bid: 551.0 by Jhanvi for MS Dhoni
+2025-09-19 22:37:36,251 - apscheduler.scheduler - INFO - Removed job 82f1deec29e84fe0938f9a7be6386bbd
+2025-09-19 22:37:36,252 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:07:36 UTC], next run at: 2025-09-19 17:07:36 UTC)" (scheduled at 2025-09-19 17:07:36.251270+00:00)
+2025-09-19 22:37:37,688 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:07:36 UTC], next run at: 2025-09-19 17:07:36 UTC)" executed successfully
+2025-09-19 22:37:39,264 - apscheduler.scheduler - INFO - Removed job 2b4a483288ea48c4a64bc9f5b1e017b4
+2025-09-19 22:37:39,265 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:07:39 UTC], next run at: 2025-09-19 17:07:39 UTC)" (scheduled at 2025-09-19 17:07:39.252767+00:00)
+2025-09-19 22:37:39,267 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:37:40,007 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:37:40,010 - __main__ - INFO - Enhanced results exported to auction_results_20250919_223740.csv
+2025-09-19 22:37:44,063 - __main__ - ERROR - Failed to fetch user profile for 234567890: Chat not found
+2025-09-19 22:37:44,882 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:37:44,883 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:37:44,883 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:37:44,886 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:37:44,887 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:37:44,887 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:07:39 UTC], next run at: 2025-09-19 17:07:39 UTC)" executed successfully
+2025-09-19 22:38:04,439 - apscheduler.scheduler - INFO - Removed job 870538007cc049d19a5d0a732138f0c3
+2025-09-19 22:38:04,439 - apscheduler.scheduler - INFO - Removed job 87a042c07ac74642818f2fcd02897905
+2025-09-19 22:38:04,440 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:38:04,441 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:38:04,442 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:38:04,443 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:38:04,445 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:38:18,906 - apscheduler.scheduler - INFO - Removed job bf25c042297a4ad9a977793e7bf06715
+2025-09-19 22:38:18,907 - apscheduler.scheduler - INFO - Removed job 74353f7cce9b4ba3bd5ddc6dd3d2a246
+2025-09-19 22:38:18,907 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:38:18,908 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:38:18,909 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:38:18,910 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:38:18,912 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:38:18,913 - __main__ - INFO - Enhanced bid: 180.0 by Jhanvi for Shubman Gill
+2025-09-19 22:38:35,340 - apscheduler.scheduler - INFO - Removed job e49ae610b9434909af9dfec6ed76f9e3
+2025-09-19 22:38:35,340 - apscheduler.scheduler - INFO - Removed job 52a553bf2ba8457099fb3aa74a0af31d
+2025-09-19 22:38:35,341 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:38:35,341 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:38:35,342 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:38:35,342 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:38:35,346 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:38:35,347 - __main__ - INFO - Enhanced bid: 190.0 by Shubh for Shubman Gill
+2025-09-19 22:38:43,659 - apscheduler.scheduler - INFO - Removed job 07e284fd55684822900b6535dfcd2d8a
+2025-09-19 22:38:43,659 - apscheduler.scheduler - INFO - Removed job c77fbf568d4448e9bfb9a8247913b33f
+2025-09-19 22:38:43,660 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:38:43,660 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:38:43,661 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:38:43,661 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:38:43,666 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:38:43,666 - __main__ - INFO - Enhanced bid: 200.0 by Jhanvi for Shubman Gill
+2025-09-19 22:38:46,627 - apscheduler.scheduler - INFO - Removed job 942bd480cfa04dc992cec11c1bcec0a6
+2025-09-19 22:38:46,628 - apscheduler.scheduler - INFO - Removed job 81e32555ec644ea38236d8d61ba31bdd
+2025-09-19 22:38:46,628 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:38:46,629 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:38:46,631 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:38:46,633 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:38:46,636 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:38:46,637 - __main__ - INFO - Enhanced bid: 300.0 by Shubh for Shubman Gill
+2025-09-19 22:38:58,706 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 721, in enhanced_bid_command
+    await update.message.reply_text(bid_text, parse_mode="HTML")
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:39:13,640 - apscheduler.scheduler - INFO - Removed job 363814913f8541b182911529b2c32942
+2025-09-19 22:39:13,641 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:09:13 UTC], next run at: 2025-09-19 17:09:13 UTC)" (scheduled at 2025-09-19 17:09:13.629488+00:00)
+2025-09-19 22:39:16,124 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:09:13 UTC], next run at: 2025-09-19 17:09:13 UTC)" executed successfully
+2025-09-19 22:39:16,642 - apscheduler.scheduler - INFO - Removed job c26b153b630647d1a6c7c34169474733
+2025-09-19 22:39:16,643 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:09:16 UTC], next run at: 2025-09-19 17:09:16 UTC)" (scheduled at 2025-09-19 17:09:16.630914+00:00)
+2025-09-19 22:39:16,644 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:39:18,688 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:39:18,689 - __main__ - INFO - Enhanced results exported to auction_results_20250919_223918.csv
+2025-09-19 22:39:24,413 - __main__ - ERROR - Failed to fetch user profile for 121212121: Chat not found
+2025-09-19 22:39:25,233 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:39:25,234 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:39:25,234 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:39:25,239 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:39:25,240 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:39:25,240 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:09:16 UTC], next run at: 2025-09-19 17:09:16 UTC)" executed successfully
+2025-09-19 22:39:35,165 - apscheduler.scheduler - INFO - Removed job 49635af98807492486bde78a59595621
+2025-09-19 22:39:35,166 - apscheduler.scheduler - INFO - Removed job ff0205fc51094d378d8d908c363814c1
+2025-09-19 22:39:35,166 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:39:35,167 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:39:35,168 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:39:35,168 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:39:35,172 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:39:40,387 - __main__ - ERROR - Failed to fetch user profile for 121212121: Chat not found
+2025-09-19 22:40:02,173 - apscheduler.scheduler - INFO - Removed job 0cd72b5048ca4ee8a1827ecbe6def244
+2025-09-19 22:40:02,173 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:10:02 UTC], next run at: 2025-09-19 17:10:02 UTC)" (scheduled at 2025-09-19 17:10:02.166953+00:00)
+2025-09-19 22:40:04,759 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:10:02 UTC], next run at: 2025-09-19 17:10:02 UTC)" executed successfully
+2025-09-19 22:40:05,175 - apscheduler.scheduler - INFO - Removed job c02a5e8894db47d6af47086cd1b1f822
+2025-09-19 22:40:05,176 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:10:05 UTC], next run at: 2025-09-19 17:10:05 UTC)" (scheduled at 2025-09-19 17:10:05.167805+00:00)
+2025-09-19 22:40:05,177 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:40:05,997 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:40:06,000 - __main__ - INFO - Enhanced results exported to auction_results_20250919_224005.csv
+2025-09-19 22:40:10,185 - __main__ - ERROR - Failed to fetch user profile for 456789123: Chat not found
+2025-09-19 22:40:13,873 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:40:13,873 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:40:13,874 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:40:13,878 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:40:13,878 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:40:13,881 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:10:05 UTC], next run at: 2025-09-19 17:10:05 UTC)" executed successfully
+2025-09-19 22:40:19,376 - __main__ - ERROR - Failed to fetch user profile for 456789123: Chat not found
+2025-09-19 22:40:32,407 - apscheduler.scheduler - INFO - Removed job 461618270ede44c7a15825339a0f149b
+2025-09-19 22:40:32,407 - apscheduler.scheduler - INFO - Removed job 3e25c7fac4c34c7f95076b8c20963274
+2025-09-19 22:40:32,407 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:40:32,408 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:40:32,409 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:40:32,409 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:40:32,414 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:40:32,415 - __main__ - INFO - Enhanced bid: 300.0 by Shubh for Hardik Pandya
+2025-09-19 22:40:48,586 - apscheduler.scheduler - INFO - Removed job 2fc979f5488943959d1f8c53be5fbf72
+2025-09-19 22:40:48,587 - apscheduler.scheduler - INFO - Removed job ef91ff724f3c4cdaa90f10fe3ed93299
+2025-09-19 22:40:48,587 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:40:48,588 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:40:48,588 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:40:48,589 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:40:48,592 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:40:48,592 - __main__ - INFO - Enhanced bid: 350.0 by Jhanvi for Hardik Pandya
+2025-09-19 22:40:54,219 - apscheduler.scheduler - INFO - Removed job e12ac7a0c308422aaf55274a3cb2c119
+2025-09-19 22:40:54,219 - apscheduler.scheduler - INFO - Removed job 61af7c707807400786001f18cfb4b407
+2025-09-19 22:40:54,220 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:40:54,220 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:40:54,221 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:40:54,223 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:40:54,227 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:40:54,227 - __main__ - INFO - Enhanced bid: 550.0 by Shubh for Hardik Pandya
+2025-09-19 22:41:02,205 - apscheduler.scheduler - INFO - Removed job c109cb5247984d9a832d9c538a94bd5b
+2025-09-19 22:41:02,206 - apscheduler.scheduler - INFO - Removed job dda2fe3a1284476aa72f26503e836eb6
+2025-09-19 22:41:02,206 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:41:02,207 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:41:02,207 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:41:02,208 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:41:02,213 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:41:02,214 - __main__ - INFO - Enhanced bid: 600.0 by Jhanvi for Hardik Pandya
+2025-09-19 22:41:09,373 - apscheduler.scheduler - INFO - Removed job 8da2cf90c9a14906af893b5ce7292ceb
+2025-09-19 22:41:09,373 - apscheduler.scheduler - INFO - Removed job c4f12eca85024ad6a526d801d4b4bd02
+2025-09-19 22:41:09,374 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:41:09,375 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:41:09,376 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:41:09,377 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:41:09,381 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:41:09,381 - __main__ - INFO - Enhanced bid: 700.0 by Shubh for Hardik Pandya
+2025-09-19 22:41:26,372 - apscheduler.scheduler - INFO - Removed job 2e007feea91f4e539f9b150b749871a6
+2025-09-19 22:41:26,372 - apscheduler.scheduler - INFO - Removed job 35b455a2f7b240d88ed81a185125ab82
+2025-09-19 22:41:26,373 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:41:26,373 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:41:26,374 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:41:26,374 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:41:26,379 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:41:26,379 - __main__ - INFO - Enhanced bid: 701.0 by Jhanvi for Hardik Pandya
+2025-09-19 22:41:30,570 - apscheduler.scheduler - INFO - Removed job 55cb4a690ae649e3abc7c8a609b9d823
+2025-09-19 22:41:30,571 - apscheduler.scheduler - INFO - Removed job ac58b06e886047a29b2afc10132f3a9e
+2025-09-19 22:41:30,571 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:41:30,572 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:41:30,573 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:41:30,574 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:41:30,579 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:41:30,580 - __main__ - INFO - Enhanced bid: 750.0 by Shubh for Hardik Pandya
+2025-09-19 22:41:49,924 - apscheduler.scheduler - INFO - Removed job 78514a5eabc94f04b46e436b1a68def1
+2025-09-19 22:41:49,924 - apscheduler.scheduler - INFO - Removed job 7f47c5c7f2a3418d8f8f284e5a87ac7b
+2025-09-19 22:41:49,924 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:41:49,925 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:41:49,926 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:41:49,926 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:41:49,931 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:41:49,932 - __main__ - INFO - Enhanced bid: 780.0 by Jhanvi for Hardik Pandya
+2025-09-19 22:41:52,054 - apscheduler.scheduler - INFO - Removed job f054c06d8af4459f9bc99308fa2ba4b1
+2025-09-19 22:41:52,055 - apscheduler.scheduler - INFO - Removed job 589a5c49bdb7443781ae36ef0afe9e36
+2025-09-19 22:41:52,055 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:41:52,056 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:41:52,057 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:41:52,057 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:41:52,063 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:41:52,063 - __main__ - INFO - Enhanced bid: 1000.0 by Shubh for Hardik Pandya
+2025-09-19 22:42:19,061 - apscheduler.scheduler - INFO - Removed job 0bd5dd18b1c748ca8df23f41ca5060c5
+2025-09-19 22:42:19,062 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:12:19 UTC], next run at: 2025-09-19 17:12:19 UTC)" (scheduled at 2025-09-19 17:12:19.055985+00:00)
+2025-09-19 22:42:19,709 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:12:19 UTC], next run at: 2025-09-19 17:12:19 UTC)" executed successfully
+2025-09-19 22:42:22,067 - apscheduler.scheduler - INFO - Removed job a1c5e8e2de0a41d4b764d5ab22631d14
+2025-09-19 22:42:22,068 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:12:22 UTC], next run at: 2025-09-19 17:12:22 UTC)" (scheduled at 2025-09-19 17:12:22.056978+00:00)
+2025-09-19 22:42:22,068 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:42:22,768 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:42:22,770 - __main__ - INFO - Enhanced results exported to auction_results_20250919_224222.csv
+2025-09-19 22:42:29,039 - __main__ - ERROR - Failed to fetch user profile for 123456789: Chat not found
+2025-09-19 22:42:31,199 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:42:31,200 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:42:31,201 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:42:31,205 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:42:31,205 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:42:31,207 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:12:22 UTC], next run at: 2025-09-19 17:12:22 UTC)" executed successfully
+2025-09-19 22:42:34,229 - apscheduler.scheduler - INFO - Removed job 80a130ba354748699234f7af5faccee6
+2025-09-19 22:42:34,230 - apscheduler.scheduler - INFO - Removed job 972ec599093d4f20a124d0665b5529c8
+2025-09-19 22:42:34,230 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:42:34,231 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:42:34,232 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:42:34,232 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:42:34,237 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:42:54,123 - apscheduler.scheduler - INFO - Removed job 8d823eb657514973bd11fc144255f2fa
+2025-09-19 22:42:54,124 - apscheduler.scheduler - INFO - Removed job b9704ebcdd1e478f9b0bde411ec9d231
+2025-09-19 22:42:54,124 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:42:54,125 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:42:54,126 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:42:54,126 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:42:54,131 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:42:54,131 - __main__ - INFO - Enhanced bid: 300.0 by Jhanvi for Virat Kohli
+2025-09-19 22:43:02,936 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 721, in enhanced_bid_command
+    await update.message.reply_text(bid_text, parse_mode="HTML")
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 22:43:10,717 - apscheduler.scheduler - INFO - Removed job 13337389a1504d969453d00980ca31b2
+2025-09-19 22:43:10,718 - apscheduler.scheduler - INFO - Removed job 6ca83a79404445a0bdaee8d8ebae22ab
+2025-09-19 22:43:10,718 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:43:10,719 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:43:10,720 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:43:10,721 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:43:10,725 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:43:10,725 - __main__ - INFO - Enhanced bid: 650.0 by Jhanvi for Virat Kohli
+2025-09-19 22:43:19,727 - apscheduler.scheduler - INFO - Removed job 0b423637b9314e298429cbf3b925da6c
+2025-09-19 22:43:19,728 - apscheduler.scheduler - INFO - Removed job e62dd6e8317748c8904b0a3059daea9b
+2025-09-19 22:43:19,728 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:43:19,729 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:43:19,729 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:43:19,730 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:43:19,733 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:43:19,733 - __main__ - INFO - Enhanced bid: 800.0 by Shubh for Virat Kohli
+2025-09-19 22:43:25,258 - apscheduler.scheduler - INFO - Removed job 96d9d123661344db8050bfa134e9eb24
+2025-09-19 22:43:25,258 - apscheduler.scheduler - INFO - Removed job 4285b1453a904aa09bb01e6460bbbfa2
+2025-09-19 22:43:25,259 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:43:25,260 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:43:25,261 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:43:25,261 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:43:25,264 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:43:25,265 - __main__ - INFO - Enhanced bid: 880.0 by Jhanvi for Virat Kohli
+2025-09-19 22:43:41,190 - apscheduler.scheduler - INFO - Removed job 391d2ffe935d4be8a5495b027fa65c3b
+2025-09-19 22:43:41,191 - apscheduler.scheduler - INFO - Removed job 3ca4bcc66418437fac58fbc3decdec2b
+2025-09-19 22:43:41,191 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:43:41,192 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:43:41,193 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:43:41,193 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:43:41,196 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:43:41,197 - __main__ - INFO - Enhanced bid: 881.0 by Jhanvi for Virat Kohli
+2025-09-19 22:44:08,195 - apscheduler.scheduler - INFO - Removed job daa7cf6dc01e473da3cddb50e4bc316b
+2025-09-19 22:44:08,196 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:14:08 UTC], next run at: 2025-09-19 17:14:08 UTC)" (scheduled at 2025-09-19 17:14:08.191623+00:00)
+2025-09-19 22:44:09,903 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:14:08 UTC], next run at: 2025-09-19 17:14:08 UTC)" executed successfully
+2025-09-19 22:44:11,195 - apscheduler.scheduler - INFO - Removed job d462d94964f543c980dfefd58ebe4c3c
+2025-09-19 22:44:11,196 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:14:11 UTC], next run at: 2025-09-19 17:14:11 UTC)" (scheduled at 2025-09-19 17:14:11.192900+00:00)
+2025-09-19 22:44:11,196 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:44:11,857 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:44:11,859 - __main__ - INFO - Enhanced results exported to auction_results_20250919_224411.csv
+2025-09-19 22:44:15,842 - __main__ - ERROR - Failed to fetch user profile for 543210987: Chat not found
+2025-09-19 22:44:16,426 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:44:16,427 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:44:16,427 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:44:16,432 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:44:16,432 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:44:16,433 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:14:11 UTC], next run at: 2025-09-19 17:14:11 UTC)" executed successfully
+2025-09-19 22:44:20,758 - apscheduler.scheduler - INFO - Removed job dc8d568de3c94f77ae37a1f0cf0fdea4
+2025-09-19 22:44:20,758 - apscheduler.scheduler - INFO - Removed job 0a3c1242a752486cbb2ea5aed12c8aa1
+2025-09-19 22:44:20,759 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:44:20,759 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:44:20,760 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:44:20,760 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:44:20,764 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:44:32,023 - apscheduler.scheduler - INFO - Removed job 1bd8c752788f45a98917675918d166aa
+2025-09-19 22:44:32,023 - apscheduler.scheduler - INFO - Removed job 6628b33d3040460591424f51c3e98d73
+2025-09-19 22:44:32,024 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:44:32,024 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:44:32,025 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:44:32,026 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:44:32,030 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:44:32,031 - __main__ - INFO - Enhanced bid: 200.0 by Jhanvi for Ravindra Jadeja
+2025-09-19 22:44:42,057 - apscheduler.scheduler - INFO - Removed job 38e8314b2ab943008229b172d831e5ed
+2025-09-19 22:44:42,058 - apscheduler.scheduler - INFO - Removed job 1b9eb47f9a56427ab5b4172525d0f6f9
+2025-09-19 22:44:42,058 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:44:42,058 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:44:42,059 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:44:42,060 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:44:42,063 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:44:42,064 - __main__ - INFO - Enhanced bid: 300.0 by Shubh for Ravindra Jadeja
+2025-09-19 22:45:09,065 - apscheduler.scheduler - INFO - Removed job c8704c8afbe2455e91f7d1b87a58c645
+2025-09-19 22:45:09,065 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:15:09 UTC], next run at: 2025-09-19 17:15:09 UTC)" (scheduled at 2025-09-19 17:15:09.058619+00:00)
+2025-09-19 22:45:12,069 - apscheduler.scheduler - INFO - Removed job 9c3622e37f3443e7b2cd622b3aeb3b33
+2025-09-19 22:45:12,070 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:15:12 UTC], next run at: 2025-09-19 17:15:12 UTC)" (scheduled at 2025-09-19 17:15:12.059325+00:00)
+2025-09-19 22:45:12,070 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:45:12,470 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:15:09 UTC], next run at: 2025-09-19 17:15:09 UTC)" executed successfully
+2025-09-19 22:45:13,713 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:45:13,716 - __main__ - INFO - Enhanced results exported to auction_results_20250919_224513.csv
+2025-09-19 22:45:17,999 - __main__ - ERROR - Failed to fetch user profile for 567891234: Chat not found
+2025-09-19 22:45:18,717 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:45:18,718 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:45:18,718 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:45:18,723 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:45:18,724 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 22:45:18,725 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:15:12 UTC], next run at: 2025-09-19 17:15:12 UTC)" executed successfully
+2025-09-19 22:45:25,678 - apscheduler.scheduler - INFO - Removed job 891c69528ba04d4f92d0f3cb583be8d3
+2025-09-19 22:45:25,679 - apscheduler.scheduler - INFO - Removed job f83bf7673b1341b48a5d5cf594ace119
+2025-09-19 22:45:25,679 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:45:25,680 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:45:25,680 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:45:25,681 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:45:25,684 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:45:40,220 - apscheduler.scheduler - INFO - Removed job da3ca738c5f04036abd01441458543e6
+2025-09-19 22:45:40,221 - apscheduler.scheduler - INFO - Removed job fe34a7109b384f90b1385de16e7d7c74
+2025-09-19 22:45:40,221 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:45:40,222 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:45:40,222 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:45:40,222 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:45:40,227 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:45:40,228 - __main__ - INFO - Enhanced bid: 220.0 by Jhanvi for Rohit Sharma
+2025-09-19 22:45:55,171 - apscheduler.scheduler - INFO - Removed job a601e463da3a4be39b9636f01696b90f
+2025-09-19 22:45:55,171 - apscheduler.scheduler - INFO - Removed job bea09b26e3194b02822dd77eb95c9ded
+2025-09-19 22:45:55,171 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:45:55,172 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 22:45:55,173 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 22:45:55,173 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 22:45:55,178 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 22:45:55,178 - __main__ - INFO - Enhanced bid: 258.0 by Shubh for Rohit Sharma
+2025-09-19 22:46:22,180 - apscheduler.scheduler - INFO - Removed job 6b5cf8d2f02d43578ed589bb71106436
+2025-09-19 22:46:22,180 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:16:22 UTC], next run at: 2025-09-19 17:16:22 UTC)" (scheduled at 2025-09-19 17:16:22.172242+00:00)
+2025-09-19 22:46:23,740 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:16:22 UTC], next run at: 2025-09-19 17:16:22 UTC)" executed successfully
+2025-09-19 22:46:25,175 - apscheduler.scheduler - INFO - Removed job 9f0b8e860b7e452d8af8820f348e5eaa
+2025-09-19 22:46:25,176 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:16:25 UTC], next run at: 2025-09-19 17:16:25 UTC)" (scheduled at 2025-09-19 17:16:25.173116+00:00)
+2025-09-19 22:46:25,177 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 22:46:26,926 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 22:46:26,928 - __main__ - INFO - Enhanced results exported to auction_results_20250919_224626.csv
+2025-09-19 22:46:27,550 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:16:25 UTC], next run at: 2025-09-19 17:16:25 UTC)" executed successfully
+2025-09-19 23:08:15,691 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-09-19 23:08:15,699 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-19 23:08:15,713 - telegram.ext.Application - INFO - Application.stop() complete
+2025-09-19 23:08:22,005 - __main__ - INFO - Enhanced auction state loaded successfully.
+2025-09-19 23:08:24,361 - __main__ - INFO - Starting enhanced auction bot...
+2025-09-19 23:08:29,910 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-19 23:08:29,911 - telegram.ext.Application - INFO - Application started
+2025-09-19 23:09:17,620 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:10:25,632 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:10:27,675 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 1136, in settings_command
+    await update.message.reply_text(settings_text, parse_mode="HTML")
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 374, in _request_wrapper
+    raise exception
+telegram.error.BadRequest: Message to be replied not found
+2025-09-19 23:11:44,273 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:11:48,161 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 1136, in settings_command
+    await update.message.reply_text(settings_text, parse_mode="HTML")
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 374, in _request_wrapper
+    raise exception
+telegram.error.BadRequest: Message to be replied not found
+2025-09-19 23:14:07,433 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-09-19 23:14:07,434 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-19 23:14:07,446 - telegram.ext.Application - INFO - Application.stop() complete
+2025-09-19 23:14:12,898 - __main__ - INFO - No state file found. Starting with enhanced clean state.
+2025-09-19 23:14:15,377 - __main__ - INFO - Starting enhanced auction bot...
+2025-09-19 23:14:17,477 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-19 23:14:17,478 - telegram.ext.Application - INFO - Application started
+2025-09-19 23:16:10,836 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:16:16,919 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:16:37,236 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:16:37,237 - __main__ - INFO - Team Sinister registered.
+2025-09-19 23:16:45,234 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:16:45,235 - __main__ - INFO - Team Shubh registered.
+2025-09-19 23:17:07,142 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:17:07,153 - __main__ - INFO - Captain for Sinister set to 7995262033
+2025-09-19 23:17:18,400 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:17:18,401 - __main__ - INFO - Captain for Shubh set to 7460266461
+2025-09-19 23:17:26,703 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:17:26,703 - __main__ - INFO - Players loaded from players.csv
+2025-09-19 23:17:37,138 - __main__ - ERROR - Failed to fetch user profile for 567891234: Chat not found
+2025-09-19 23:17:37,766 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:17:37,767 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:17:37,773 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:17:37,776 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:17:37,777 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:17:42,567 - apscheduler.scheduler - INFO - Removed job ce23ee59243a4751b513c26eb55a950b
+2025-09-19 23:17:42,568 - apscheduler.scheduler - INFO - Removed job 88dd407ad20145088967d88d45f2192a
+2025-09-19 23:17:42,568 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:17:42,569 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:17:42,570 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:17:42,572 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:17:42,576 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:17:44,626 - apscheduler.scheduler - INFO - Removed job 09f396139ed24f6083e12d560b6c319f
+2025-09-19 23:17:44,627 - apscheduler.scheduler - INFO - Removed job 091efd8ccddf4ea8bff7812c0662723b
+2025-09-19 23:17:44,627 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:17:44,628 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:17:44,629 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:17:44,629 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:17:44,632 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:17:50,245 - apscheduler.scheduler - INFO - Removed job 1b89d1d88f78411984edab6c9b7a788e
+2025-09-19 23:17:50,246 - apscheduler.scheduler - INFO - Removed job f9a14d5265634654a35be83a67efdc90
+2025-09-19 23:17:50,247 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:17:50,248 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:17:50,248 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:17:50,249 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:17:50,252 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:17:50,253 - __main__ - INFO - Enhanced bid: 210.0 by Sinister for Rohit Sharma
+2025-09-19 23:17:57,619 - apscheduler.scheduler - INFO - Removed job 73aa25b5cf574c16a96057997582fcd7
+2025-09-19 23:17:57,620 - apscheduler.scheduler - INFO - Removed job adb049d3302e491fa8412715957b3886
+2025-09-19 23:17:57,620 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:17:57,621 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:17:57,622 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:17:57,622 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:17:57,626 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:17:57,627 - __main__ - INFO - Enhanced bid: 240.0 by Shubh for Rohit Sharma
+2025-09-19 23:18:01,612 - apscheduler.scheduler - INFO - Removed job aef8625f0e714e0b8c99384efede58bd
+2025-09-19 23:18:01,613 - apscheduler.scheduler - INFO - Removed job abcfb071a5af4c2690481c645f7a2f39
+2025-09-19 23:18:01,613 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:18:01,614 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:18:01,615 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:18:01,616 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:18:01,619 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:18:01,620 - __main__ - INFO - Enhanced bid: 300.0 by Sinister for Rohit Sharma
+2025-09-19 23:18:09,702 - apscheduler.scheduler - INFO - Removed job 4064e58b8eac4a659d4ee4319022e5de
+2025-09-19 23:18:09,702 - apscheduler.scheduler - INFO - Removed job 9eac0d7a70cb4c8bbb676b6dd1742977
+2025-09-19 23:18:09,703 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:18:09,704 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:18:09,705 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:18:09,706 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:18:09,710 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:18:09,711 - __main__ - INFO - Enhanced bid: 340.0 by Shubh for Rohit Sharma
+2025-09-19 23:18:14,412 - apscheduler.scheduler - INFO - Removed job 2ef7860f1edc42159a1e8b98c093c45e
+2025-09-19 23:18:14,412 - apscheduler.scheduler - INFO - Removed job 91897d3dd8734ebe9766b440f00b145e
+2025-09-19 23:18:14,413 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:18:14,414 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:18:14,415 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:18:14,415 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:18:14,419 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:18:14,420 - __main__ - INFO - Enhanced bid: 500.0 by Sinister for Rohit Sharma
+2025-09-19 23:18:41,425 - apscheduler.scheduler - INFO - Removed job dc1f45b2a397416ebd8fdab384aff6a4
+2025-09-19 23:18:41,426 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:48:41 UTC], next run at: 2025-09-19 17:48:41 UTC)" (scheduled at 2025-09-19 17:48:41.413763+00:00)
+2025-09-19 23:18:42,880 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:48:41 UTC], next run at: 2025-09-19 17:48:41 UTC)" executed successfully
+2025-09-19 23:18:44,416 - apscheduler.scheduler - INFO - Removed job 46baabb6c20b43dc9d147e0eaccef06d
+2025-09-19 23:18:44,416 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:48:44 UTC], next run at: 2025-09-19 17:48:44 UTC)" (scheduled at 2025-09-19 17:48:44.414732+00:00)
+2025-09-19 23:18:44,418 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:18:45,055 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:18:45,059 - __main__ - INFO - Enhanced results exported to auction_results_20250919_231845.csv
+2025-09-19 23:18:49,022 - __main__ - ERROR - Failed to fetch user profile for 543210987: Chat not found
+2025-09-19 23:18:49,637 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:18:49,638 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:18:49,638 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:18:49,642 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:18:49,644 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:18:49,646 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:48:44 UTC], next run at: 2025-09-19 17:48:44 UTC)" executed successfully
+2025-09-19 23:18:53,325 - apscheduler.scheduler - INFO - Removed job 03fa5e01c29b4287a57dd3f65dfd1549
+2025-09-19 23:18:53,325 - apscheduler.scheduler - INFO - Removed job acdee38ed71f48219c14a7728d5e0b27
+2025-09-19 23:18:53,326 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:18:53,327 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:18:53,328 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:18:53,328 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:18:53,332 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:19:11,037 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_application.py", line 1311, in process_update
+    await coroutine
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\AUCTION\Auction.py", line 721, in enhanced_bid_command
+    await update.message.reply_text(bid_text, parse_mode="HTML")
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_message.py", line 1910, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 3055, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 1100, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 810, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\shubh\OneDrive\Desktop\cricket\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-09-19 23:19:18,822 - apscheduler.scheduler - INFO - Removed job 3cb9108d56744c77b8a4b3019a2bdbf7
+2025-09-19 23:19:18,822 - apscheduler.scheduler - INFO - Removed job a2f02f98e35b4cce9a0533136b730bec
+2025-09-19 23:19:18,823 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:19:18,826 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:19:18,827 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:19:18,828 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:19:18,831 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:19:18,831 - __main__ - INFO - Enhanced bid: 182.0 by Shubh for Ravindra Jadeja
+2025-09-19 23:19:21,893 - apscheduler.scheduler - INFO - Removed job 9b2b3d549cfc447abee62aad2978933e
+2025-09-19 23:19:21,894 - apscheduler.scheduler - INFO - Removed job 47d42a8f49f241049b8d2fd44fad0f04
+2025-09-19 23:19:21,894 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:19:21,894 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:19:21,895 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:19:21,896 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:19:21,899 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:19:21,899 - __main__ - INFO - Enhanced bid: 185.0 by Sinister for Ravindra Jadeja
+2025-09-19 23:19:31,521 - apscheduler.scheduler - INFO - Removed job 88cf933c32bf40ce948d157cb4804ed6
+2025-09-19 23:19:31,521 - apscheduler.scheduler - INFO - Removed job b8f985f013a04daba4ef8cef52287036
+2025-09-19 23:19:31,522 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:19:31,523 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:19:31,524 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:19:31,525 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:19:31,529 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:19:31,529 - __main__ - INFO - Enhanced bid: 200.0 by Shubh for Ravindra Jadeja
+2025-09-19 23:19:47,697 - __main__ - ERROR - Failed to fetch user profile for 543210987: Chat not found
+2025-09-19 23:19:58,531 - apscheduler.scheduler - INFO - Removed job 6e8179725722473b906c2b1526a9eb89
+2025-09-19 23:19:58,532 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:49:58 UTC], next run at: 2025-09-19 17:49:58 UTC)" (scheduled at 2025-09-19 17:49:58.522835+00:00)
+2025-09-19 23:20:01,214 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:49:58 UTC], next run at: 2025-09-19 17:49:58 UTC)" executed successfully
+2025-09-19 23:20:01,527 - apscheduler.scheduler - INFO - Removed job e91739a1e5dc4b24be463bb8daa4c80b
+2025-09-19 23:20:01,528 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:50:01 UTC], next run at: 2025-09-19 17:50:01 UTC)" (scheduled at 2025-09-19 17:50:01.523866+00:00)
+2025-09-19 23:20:01,528 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:20:02,247 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:20:02,251 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232002.csv
+2025-09-19 23:20:06,641 - __main__ - ERROR - Failed to fetch user profile for 234567890: Chat not found
+2025-09-19 23:20:07,461 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:20:07,463 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:20:07,463 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:20:07,466 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:20:07,468 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:20:07,469 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:50:01 UTC], next run at: 2025-09-19 17:50:01 UTC)" executed successfully
+2025-09-19 23:20:12,145 - apscheduler.scheduler - INFO - Removed job 33f2992d2c004ed6a7d9b87e8adbfc23
+2025-09-19 23:20:12,145 - apscheduler.scheduler - INFO - Removed job ae0902c8606c443ca3dc28dcba45e02d
+2025-09-19 23:20:12,146 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:20:12,147 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:20:12,148 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:20:12,150 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:20:12,153 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:20:21,800 - apscheduler.scheduler - INFO - Removed job d547f05b268146d7b4935447e97c449d
+2025-09-19 23:20:21,801 - apscheduler.scheduler - INFO - Removed job 6a52776dbb1e452c89540e8e9f474ffc
+2025-09-19 23:20:21,802 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:20:21,802 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:20:21,804 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:20:21,807 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:20:21,810 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:20:21,813 - __main__ - INFO - Enhanced bid: 200.0 by Sinister for Shubman Gill
+2025-09-19 23:20:26,100 - apscheduler.scheduler - INFO - Removed job fd487c3c6a0c48d98135384ea75d890b
+2025-09-19 23:20:26,100 - apscheduler.scheduler - INFO - Removed job 5a5cd514b3b840c084b9b00dfe6c1502
+2025-09-19 23:20:26,100 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:20:26,101 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:20:26,102 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:20:26,103 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:20:26,107 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:20:26,108 - __main__ - INFO - Enhanced bid: 300.0 by Shubh for Shubman Gill
+2025-09-19 23:20:27,839 - apscheduler.scheduler - INFO - Removed job 3573fa3f41944c6c9d53b98fac49cdb2
+2025-09-19 23:20:27,839 - apscheduler.scheduler - INFO - Removed job 152e31f7631f4737acc18b0df5882b9c
+2025-09-19 23:20:27,839 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:20:27,840 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:20:27,841 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:20:27,842 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:20:27,846 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:20:27,847 - __main__ - INFO - Enhanced bid: 1400.0 by Sinister for Shubman Gill
+2025-09-19 23:20:44,837 - apscheduler.scheduler - INFO - Removed job 55965f93352341a69e0fbd5ee2d11f6f
+2025-09-19 23:20:44,837 - apscheduler.scheduler - INFO - Removed job 2fb43a9dbf5f4f8a9721af319b534dca
+2025-09-19 23:20:44,838 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:20:44,841 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:20:44,844 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232044.csv
+2025-09-19 23:20:49,035 - __main__ - ERROR - Failed to fetch user profile for 456789123: Chat not found
+2025-09-19 23:20:49,753 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:20:49,754 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:20:49,754 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:20:49,758 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:20:49,758 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:20:53,920 - apscheduler.scheduler - INFO - Removed job f9768b2a03464515bfb5c9a63c6582e0
+2025-09-19 23:20:53,920 - apscheduler.scheduler - INFO - Removed job 7ddc62c0e0fe482aaaa97ab17643eb03
+2025-09-19 23:20:53,921 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:20:53,921 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:20:53,922 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:20:53,923 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:20:53,927 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:21:20,923 - apscheduler.scheduler - INFO - Removed job 21caa256c0df4c23b4acb679c1eee1fe
+2025-09-19 23:21:20,923 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:51:20 UTC], next run at: 2025-09-19 17:51:20 UTC)" (scheduled at 2025-09-19 17:51:20.921495+00:00)
+2025-09-19 23:21:23,938 - apscheduler.scheduler - INFO - Removed job 0cecd3af8f3d408b819b94f7bc730d15
+2025-09-19 23:21:23,939 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:51:23 UTC], next run at: 2025-09-19 17:51:23 UTC)" (scheduled at 2025-09-19 17:51:23.922443+00:00)
+2025-09-19 23:21:23,939 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:21:24,772 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:51:20 UTC], next run at: 2025-09-19 17:51:20 UTC)" executed successfully
+2025-09-19 23:21:28,672 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:21:28,677 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232128.csv
+2025-09-19 23:21:32,964 - __main__ - ERROR - Failed to fetch user profile for 112233445: Chat not found
+2025-09-19 23:21:34,808 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:21:34,809 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:21:34,809 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:21:34,814 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:21:34,816 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:21:34,817 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:51:23 UTC], next run at: 2025-09-19 17:51:23 UTC)" executed successfully
+2025-09-19 23:21:37,470 - apscheduler.scheduler - INFO - Removed job 617ceabed8394c10a844a41881883d07
+2025-09-19 23:21:37,473 - apscheduler.scheduler - INFO - Removed job 153264eefff140e3aaa5bb67ca360d70
+2025-09-19 23:21:37,474 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:21:37,475 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:21:37,476 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:21:37,477 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:21:37,480 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:22:04,485 - apscheduler.scheduler - INFO - Removed job ad30de52a78d4e68bf2c65ed055bb28d
+2025-09-19 23:22:04,485 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:52:04 UTC], next run at: 2025-09-19 17:52:04 UTC)" (scheduled at 2025-09-19 17:52:04.475065+00:00)
+2025-09-19 23:22:07,371 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:52:04 UTC], next run at: 2025-09-19 17:52:04 UTC)" executed successfully
+2025-09-19 23:22:07,479 - apscheduler.scheduler - INFO - Removed job c9470de180ad464386643f5eac495156
+2025-09-19 23:22:07,480 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:52:07 UTC], next run at: 2025-09-19 17:52:07 UTC)" (scheduled at 2025-09-19 17:52:07.475971+00:00)
+2025-09-19 23:22:07,481 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:22:08,097 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:22:08,099 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232208.csv
+2025-09-19 23:22:12,285 - __main__ - ERROR - Failed to fetch user profile for 123456789: Chat not found
+2025-09-19 23:22:12,959 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:22:12,960 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:22:12,961 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:22:12,964 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:22:12,966 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:22:12,967 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:52:07 UTC], next run at: 2025-09-19 17:52:07 UTC)" executed successfully
+2025-09-19 23:22:32,253 - apscheduler.scheduler - INFO - Removed job 63a02ad12bd64cf18d58918b0861291b
+2025-09-19 23:22:32,253 - apscheduler.scheduler - INFO - Removed job 3533f0c215a5480c8c86548bad214720
+2025-09-19 23:22:32,254 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:22:32,254 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:22:32,256 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:22:32,256 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:22:32,260 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:22:59,260 - apscheduler.scheduler - INFO - Removed job 3df2c697ad634207ad843978d261da99
+2025-09-19 23:22:59,261 - apscheduler.executors.default - INFO - Running job "timer_reminder (trigger: date[2025-09-19 17:52:59 UTC], next run at: 2025-09-19 17:52:59 UTC)" (scheduled at 2025-09-19 17:52:59.254455+00:00)
+2025-09-19 23:23:01,847 - apscheduler.executors.default - INFO - Job "timer_reminder (trigger: date[2025-09-19 17:52:59 UTC], next run at: 2025-09-19 17:52:59 UTC)" executed successfully
+2025-09-19 23:23:02,270 - apscheduler.scheduler - INFO - Removed job 2ba318205cb9439ca7e12bc6ce512cce
+2025-09-19 23:23:02,271 - apscheduler.executors.default - INFO - Running job "end_auction (trigger: date[2025-09-19 17:53:02 UTC], next run at: 2025-09-19 17:53:02 UTC)" (scheduled at 2025-09-19 17:53:02.255645+00:00)
+2025-09-19 23:23:02,272 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:23:02,984 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:23:02,992 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232302.csv
+2025-09-19 23:23:07,895 - __main__ - ERROR - Failed to fetch user profile for 121212121: Chat not found
+2025-09-19 23:23:08,912 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:23:08,913 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:23:08,914 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:23:08,919 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:23:08,920 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:23:08,921 - apscheduler.executors.default - INFO - Job "end_auction (trigger: date[2025-09-19 17:53:02 UTC], next run at: 2025-09-19 17:53:02 UTC)" executed successfully
+2025-09-19 23:23:11,575 - apscheduler.scheduler - INFO - Removed job 440bb86aada24b84989e07092cc2d817
+2025-09-19 23:23:11,575 - apscheduler.scheduler - INFO - Removed job 444b321352664695b253ab316d427f73
+2025-09-19 23:23:11,576 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:23:11,576 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:23:11,577 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:23:11,578 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:23:11,582 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:23:26,425 - apscheduler.scheduler - INFO - Removed job ef72fc9ea5f84effb1bd8280b249bc49
+2025-09-19 23:23:26,425 - apscheduler.scheduler - INFO - Removed job c2527ce300b84fd88a72adb79486de97
+2025-09-19 23:23:26,426 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:23:27,797 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:23:27,799 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232327.csv
+2025-09-19 23:23:31,853 - __main__ - ERROR - Failed to fetch user profile for 987654321: Chat not found
+2025-09-19 23:23:32,365 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:23:32,365 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:23:32,366 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:23:32,371 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:23:32,373 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:23:36,718 - apscheduler.scheduler - INFO - Removed job cdad8e8e91134289a87a9974aeba1fd2
+2025-09-19 23:23:36,719 - apscheduler.scheduler - INFO - Removed job 7df8cbaf565248d0b3c3ed3fa90d03b4
+2025-09-19 23:23:36,719 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:23:36,720 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:23:36,720 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:23:36,721 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:23:36,726 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:23:40,656 - apscheduler.scheduler - INFO - Removed job 670465d745504c6d9adc27dce90a3b49
+2025-09-19 23:23:40,656 - apscheduler.scheduler - INFO - Removed job f9780a982c0c4dc1b9f114c415bd5dab
+2025-09-19 23:23:40,656 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:23:41,381 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:23:41,384 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232341.csv
+2025-09-19 23:23:45,571 - __main__ - ERROR - Failed to fetch user profile for 987654321: Chat not found
+2025-09-19 23:23:46,084 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:23:46,084 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:23:46,085 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:23:46,089 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:23:46,092 - __main__ - INFO - Enhanced auction started for Unknown User
+2025-09-19 23:23:48,643 - apscheduler.scheduler - INFO - Removed job 535965af85c2451caad8a72a2ba578bd
+2025-09-19 23:23:48,643 - apscheduler.scheduler - INFO - Removed job 4d1c50473df246058712709ff6e1eb6b
+2025-09-19 23:23:48,644 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:23:48,645 - apscheduler.scheduler - INFO - Added job "timer_reminder" to job store "default"
+2025-09-19 23:23:48,646 - apscheduler.scheduler - INFO - Added job "end_auction" to job store "default"
+2025-09-19 23:23:48,646 - __main__ - INFO - Enhanced timer started for 30 seconds.
+2025-09-19 23:23:48,651 - __main__ - ERROR - Failed to save data to enhanced_auction_data_v15.json: Object of type datetime is not JSON serializable
+2025-09-19 23:23:51,408 - apscheduler.scheduler - INFO - Removed job 64d837b5b21e43eba217d2138d5f8258
+2025-09-19 23:23:51,409 - apscheduler.scheduler - INFO - Removed job b58529bbd5054c7c9e64f8dc4da3e102
+2025-09-19 23:23:51,409 - __main__ - INFO - Enhanced timer reset completed.
+2025-09-19 23:23:52,032 - __main__ - INFO - Enhanced auction state saved successfully.
+2025-09-19 23:23:52,035 - __main__ - INFO - Enhanced results exported to auction_results_20250919_232352.csv
+2025-09-19 23:27:45,194 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-09-19 23:27:45,195 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-19 23:27:45,213 - telegram.ext.Application - INFO - Application.stop() complete

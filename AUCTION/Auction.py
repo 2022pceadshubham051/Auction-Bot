@@ -1557,7 +1557,7 @@ def main() -> None:
     
     load_data()
     
-    token = "8499954180:AAGneRS8-mYPi-4dk7cDidADqLi9polk2gQ"
+    token = "8499954180:AAE8O1Q8iukvxCxjRiQbxE4GPxNntR2HrNg"
     
     try:
         application = ApplicationBuilder().token(token).build()
@@ -1596,3 +1596,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

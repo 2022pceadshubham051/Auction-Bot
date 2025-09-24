@@ -1,1 +1,8 @@
-python-telegram-bot==20.8
+# Core dependency for Telegram Bot
+python-telegram-bot==20.3
+
+# For handling CSV player data
+pandas
+
+# For environment variables (if you plan to use .env files later)
+python-dotenv

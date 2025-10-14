@@ -7,16 +7,19 @@ import asyncio
 from datetime import datetime, timedelta
 from typing import Optional, Dict, List, Any
 
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import (
-    ApplicationBuilder,
-    CommandHandler,
-    ContextTypes,
-    MessageHandler,
-    filters,
-    CallbackQueryHandler,
-)
-
+try:
+    from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+    from telegram.ext import (
+        ApplicationBuilder,
+        CommandHandler,
+        ContextTypes,
+        MessageHandler,
+        filters,
+        CallbackQueryHandler,
+    )
+except ImportError:
+    print("python-telegram-bot not installed. Please install it using: pip install python-telegram-bot==20.7")
+    exit(1)
 # Enhanced logging setup
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -1596,5 +1599,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
